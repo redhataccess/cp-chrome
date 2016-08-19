@@ -70,7 +70,10 @@ Polymer({
     },
 
     registerAPI: function () {
-        window.portal.setLocale = locale => this.set('locale', locale);
+        var self = this;
+        window.portal.setLocale = function setLocale(locale) {
+            self.set('locale', locale);
+        };
     },
 
     revealGate: function (pendingAssetCount) {
