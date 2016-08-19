@@ -31,6 +31,6 @@ Polymer({
         for (i = 0; i < inline_scripts.length; ++i) {
             var item = inline_scripts[i];
         }
-    },
+    }
 
 });

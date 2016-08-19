@@ -38,6 +38,6 @@ Polymer({
         while (this.children.length) {
             document.head.appendChild(this.children[0]);
         }
-    },
+    }
 
 });

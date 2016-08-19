@@ -1,0 +1,232 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="cp-menu-accessibility">
+    <template>
+
+        <div class="accessibility-nav sr-only">
+            <a href="https://access.redhat.com/">
+                <h1>Red Hat <span>Customer </span><span>Portal</span></h1>
+            </a>
+            <p><a href="#cp-main">Skip to main content</a></p>
+
+            <nav role="navigation" aria-labelledby="accessibility-nav-heading">
+                <h2 id="accessibility-nav-heading">Main Navigation</h2>
+                <!---{% include 'chrome/nimbus/includes/mobile-menu.html' with { 'namespace': 'accessibility' } %} -->
+                <ul>
+                    <li>
+                        <a href="#" class="has-subnav"><span>Products &amp; Services</span></a>
+                        <ul class="mm-hide">
+                            <li aria-hidden="true"><a href="#" class="back">Back</a></li>
+                            <li><a href="https://access.redhat.com/products">View All Products</a></li>
+                            <li>
+                                <a href="#" class="has-subnav"><span>Infrastructure and Management</span></a>
+                                <ul class="mm-hide">
+                                    <li aria-hidden="true"><a href="#" class="back">Back</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-enterprise-linux/">Red Hat Enterprise Linux</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-enterprise-virtualization/">Red Hat Enterprise Virtualization</a></li>
+                                    <li><a href="https://access.redhat.com/products/identity-management/">Red Hat Identity Management</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-directory-server/">Red Hat Directory Server</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-certificate-system/">Red Hat Certificate System</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-satellite/">Red Hat Satellite</a></li>
+                                    <li><a href="https://access.redhat.com/products/subscription-asset-manager/">Subscription Asset Manager</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-update-infrastructure/">Red Hat Update Infrastructure</a></li>
+                                    <li><a href="https://access.redhat.com/insights/info/?intcmp=mm|p|im|rhaijan2016&amp;">Red Hat Insights</a></li>
+                                    <li><a href="https://access.redhat.com/products/ansible-tower-red-hat/">Ansible Tower by Red Hat</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="has-subnav"><span>Cloud Computing</span></a>
+                                <ul class="mm-hide">
+                                    <li aria-hidden="true"><a href="#" class="back">Back</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-cloudforms/">Red Hat CloudForms</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-openstack-platform/">Red Hat OpenStack Platform</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-cloud-infrastructure/">Red Hat Cloud Infrastructure</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-cloud-suite/">Red Hat Cloud Suite</a></li>
+                                    <li><a href="https://access.redhat.com/products/openshift-enterprise-red-hat/">OpenShift Enterprise by Red Hat</a></li>
+                                    <li><a href="https://access.redhat.com/products/openshift-online-red-hat/">OpenShift Online by Red Hat</a></li>
+                                    <li><a href="https://access.redhat.com/products/openshift-dedicated-red-hat/">OpenShift Dedicated by Red Hat</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="has-subnav"><span>Storage</span></a>
+                                <ul class="mm-hide">
+                                    <li aria-hidden="true"><a href="#" class="back">Back</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-storage/">Red Hat Gluster Storage</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-ceph-storage/">Red Hat Ceph Storage</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="has-subnav"><span>JBoss Development and Management</span></a>
+                                <ul class="mm-hide">
+                                    <li aria-hidden="true"><a href="#" class="back">Back</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-jboss-enterprise-application-platform/">Red Hat JBoss Enterprise Application Platform</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-jboss-data-grid/">Red Hat JBoss Data Grid</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-jboss-web-server/">Red Hat JBoss Web Server</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-jboss-portal/">Red Hat JBoss Portal</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-jboss-operations-network/">Red Hat JBoss Operations Network</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-jboss-developer-studio/">Red Hat JBoss Developer Studio</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="has-subnav"><span>JBoss Integration and Automation</span></a>
+                                <ul class="mm-hide">
+                                    <li aria-hidden="true"><a href="#" class="back">Back</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-jboss-data-virtualization/">Red Hat JBoss Data Virtualization</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-jboss-fuse/">Red Hat JBoss Fuse</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-jboss-a-mq/">Red Hat JBoss A-MQ</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-jboss-bpm-suite/">Red Hat JBoss BPM Suite</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-jboss-brms/">Red Hat JBoss BRMS</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="has-subnav"><span>Mobile</span></a>
+                                <ul class="mm-hide">
+                                    <li aria-hidden="true"><a href="#" class="back">Back</a></li>
+                                    <li><a href="https://access.redhat.com/products/red-hat-mobile-application-platform/">Red Hat Mobile Application Platform</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="has-subnav"><span>Services</span></a>
+                                <ul class="mm-hide">
+                                    <li aria-hidden="true"><a href="#" class="back">Back</a></li>
+                                    <li><a href="https://access.redhat.com/products/Consulting/">Consulting</a></li>
+                                    <li><a href="https://access.redhat.com/support/offerings/tam/">Technical Account Management</a></li>
+                                    <li><a href="https://access.redhat.com/products/training-certifications/">Training &amp; Certifications</a></li>
+                                    <li><a href="https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/">Red Hat Enterprise Linux Developer Program</a></li>
+                                </ul>
+                            </li>
+                            <li class="heading">Support</li>
+                            <li><a href="https://access.redhat.com/support/">Get Support</a></li>
+                            <li><a href="https://access.redhat.com/support/offerings/production/">Production Support</a></li>
+                            <li><a href="https://access.redhat.com/support/offerings/developer/">Development Support</a></li>
+                            <li><a href="https://access.redhat.com/support/policy/update_policies/">Product Life Cycle &amp; Update Policies</a></li>
+                            <li class="heading">Knowledge</li>
+                            <li><a href="https://access.redhat.com/search/">Search</a></li>
+                            <li><a href="https://access.redhat.com/documentation/">Documentation</a></li>
+                            <li><a href="https://access.redhat.com/search/#/knowledgebase">Knowledgebase</a></li>
+                            <li><a href="https://access.redhat.com/search/#/videos">Videos</a></li>
+                            <li><a href="https://access.redhat.com/search/#/discussions">Discussions</a></li>
+                            <li class="heading">Ecosystem</li>
+                            <li><a href="https://access.redhat.com/ecosystem">Overview</a></li>
+                            <li><a href="https://access.redhat.com/search/browse/certified-hardware#?">Certified Hardware</a></li>
+                            <li><a href="https://access.redhat.com/search/browse/certified-software#?">Certified Software</a></li>
+                            <li><a href="https://access.redhat.com/search/browse/certified-cloud-providers#?">Certified Cloud and Service Providers</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="has-subnav"><span>Tools</span></a>
+                        <ul class="mm-hide">
+                            <li aria-hidden="true"><a href="#" class="back">Back</a></li>
+                            <li class="heading">Red Hat Insights</li>
+                            <li><a href="https://access.redhat.com/insights/info/?intcmp=mm|t|c1|rhaidec2015&amp;">Learn More</a></li>
+                            <li class="heading">Red Hat Access Labs</li>
+                            <li><a href="https://access.redhat.com/labs/">Explore Labs</a></li>
+                            <li><a href="https://access.redhat.com/labs/#?type=config">Configuration</a></li>
+                            <li><a href="https://access.redhat.com/labs/#?type=deploy">Deployment</a></li>
+                            <li><a href="https://access.redhat.com/labs/#?type=troubleshoot">Troubleshooting</a></li>
+                            <li><a href="https://access.redhat.com/labs/#?type=security">Security</a></li>
+                            <li class="heading">Additional Tools</li>
+                            <li><a href="https://access.redhat.com/products/red-hat-access/">Red Hat Access plug-ins</a></li>
+                            <li><a href="https://access.redhat.com/tools/satcert/">Red Hat Satellite Certificate Tool</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="has-subnav"><span>Security</span></a>
+                        <ul class="mm-hide">
+                            <li aria-hidden="true"><a href="#" class="back">Back</a></li>
+                            <li><a href="https://access.redhat.com/security/">Product Security Center</a></li>
+                            <li class="heading">Security Updates</li>
+                            <li><a href="https://access.redhat.com/security/security-updates/#/security-advisories">Security Advisories</a></li>
+                            <li><a href="https://access.redhat.com/security/security-updates/#/cve">Red Hat CVE Database</a></li>
+                            <li><a href="https://access.redhat.com/security/security-updates/#/security-labs">Security Labs</a></li>
+                            <li class="heading">Resources</li>
+                            <li><a href="https://access.redhat.com/security/overview/">Overview</a></li>
+                            <li><a href="https://access.redhat.com/blogs/product-security">Security Blog</a></li>
+                            <li><a href="https://www.redhat.com/security/data/metrics/">Security Measurement</a></li>
+                            <li><a href="https://access.redhat.com/security/updates/classification/">Severity Ratings</a></li>
+                            <li><a href="https://access.redhat.com/security/updates/backporting/">Backporting Policies</a></li>
+                            <li><a href="https://access.redhat.com/security/team/key/">Product Signing (GPG) Keys</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="has-subnav"><span>Community</span></a>
+                        <ul class="mm-hide">
+                            <li aria-hidden="true"><a href="#" class="back">Back</a></li>
+                            <li class="heading">Discussions</li>
+                            <li><a href="https://access.redhat.com/discussions?product=25&amp;category=All&amp;tags=All">Red Hat Enterprise Linux</a></li>
+                            <li><a href="https://access.redhat.com/discussions?product=8163&amp;category=All&amp;tags=All">Red Hat Enterprise Virtualization</a></li>
+                            <li><a href="https://access.redhat.com/discussions?product=36&amp;category=All&amp;tags=All">Red Hat Satellite</a></li>
+                            <li><a href="https://access.redhat.com/discussions?product=22&amp;category=All&amp;tags=All">Customer Portal</a></li>
+                            <li><a href="https://access.redhat.com/groups/">Private Groups</a></li>
+                            <li><a href="https://access.redhat.com/discussions?keyword=&amp;name=&amp;product=All&amp;category=All&amp;tags=All">All Discussions</a></li>
+                            <li><a href="https://access.redhat.com/node/add/discussion">Start a Discussion</a></li>
+                            <li class="heading">Blogs</li>
+                            <li><a href="https://access.redhat.com/blogs/767163">Customer Portal</a></li>
+                            <li><a href="https://access.redhat.com/blogs/766093">Red Hat Product Security</a></li>
+                            <li><a href="https://access.redhat.com/blogs/759303">Red Hat Access Labs</a></li>
+                            <li><a href="https://access.redhat.com/blogs/insights/">Red Hat Insights</a></li>
+                            <li><a href="https://access.redhat.com/blogs/">All Blogs</a></li>
+                            <li class="heading">Events</li>
+                            <li><a href="https://access.redhat.com/customer-convergence/">Customer Events</a></li>
+                            <li><a href="http://www.redhat.com/summit/">Red Hat Summit</a></li>
+                            <li class="heading">Stories</li>
+                            <li><a href="https://access.redhat.com/subscription-value/">Red Hat Subscription Benefits</a></li>
+                            <li><a href="https://access.redhat.com/you-asked-we-acted/">You Asked. We Acted.</a></li>
+                            <li><a href="http://www.redhat.com/en/open-source">Open Source Communities</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://access.redhat.com/management/">Subscriptions</a></li>
+                    <li><a href="https://access.redhat.com/downloads/">Downloads</a></li>
+                    <li><a href="https://access.redhat.com/support/cases/">Support Cases</a></li>
+                    <li>
+                        <a href="#" class="has-subnav"><span>Account</span></a>
+                        <ul class="utility mm-hide">
+                            <li aria-hidden="true"><a href="#" class="back">Back</a></li>
+                            <li class="mobile-accountLinksLoggedOut unauthenticated"><a href="https://access.redhat.com/login?redirectTo=https%3A//access.redhat.com/" id="accessibility-accountLogin">Log In</a></li>
+                            <li class="mobile-accountLinksLoggedOut unauthenticated"><a href="https://www.redhat.com/wapps/ugc/register.html">Register</a></li>
+                            <li class="mobile-accountLinksLoggedIn authenticated" style="display: block;">
+                                <div class="account-info" id="accessibility-accountUser">
+                                    <div class="account-name"><strong id="accessibility-userFullName">Homa Seyed</strong></div>
+                                    <div class="account-org"><span id="accessibility-userOrg"></span></div>
+                                    <div class="account-number mobile-accountNumber"><span class="property">Red Hat Account Number:</span> <span class="value">1460290</span></div>
+                                </div>
+                            </li>
+                            <li class="mobile-accountLinksLoggedIn authenticated" style="display: block;"><a href="https://www.redhat.com/wapps/ugc/protected/personalInfo.html">Account Details</a></li>
+                            <li class="mobile-accountLinksLoggedIn authenticated" style="display: block;"><a href="https://www.redhat.com/wapps/ugc/protected/prefs.html">Newsletter and Contact Preferences</a></li>
+                            <li class="mobile-accountLinksLoggedIn authenticated" style="display: block;"><a href="https://www.redhat.com/wapps/ugc/protected/usermgt/userList.html">User Management</a></li>
+                            <li class="mobile-accountLinksLoggedIn authenticated" style="display: block;"><a href="https://www.redhat.com/wapps/ugc/protected/account.html">Account Maintenance</a></li>
+                            <li class="mobile-accountLinksLoggedIn authenticated" style="display: block;"><a href="https://access.redhat.com/user">My Profile</a></li>
+                            <li class="mobile-accountLinksLoggedIn authenticated" style="display: block;"><a href="https://access.redhat.com/user" id="accessibility-userNotificationsLink">Notifications</a></li>
+                            <li class="mobile-accountLinksLoggedIn authenticated" style="display: block;"><a href="https://access.redhat.com/help/">Help</a></li>
+                            <li class="logout mobile-accountLinksLoggedIn authenticated" style="display: block;"><a href="https://www.redhat.com/wapps/sso/logout.html?redirect=https://access.redhat.com/logout">Log Out</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="has-subnav"><span>Language</span></a>
+                        <ul class="utility mm-hide" id="accessibility-localesMenu">
+                            <li aria-hidden="true"><a href="#" class="back">Back</a></li>
+                            <li><a href="https://access.redhat.com/changeLanguage?language=en&amp;redirectTo=https%3A//access.redhat.com/" id="accessibility-en">English</a></li>
+                            <li><a href="https://access.redhat.com/changeLanguage?language=es&amp;redirectTo=https%3A//access.redhat.com/" id="accessibility-es">español</a></li>
+                            <li><a href="https://access.redhat.com/changeLanguage?language=de&amp;redirectTo=https%3A//access.redhat.com/" id="accessibility-de">Deutsch</a></li>
+                            <li><a href="https://access.redhat.com/changeLanguage?language=it&amp;redirectTo=https%3A//access.redhat.com/" id="accessibility-it">italiano</a></li>
+                            <li><a href="https://access.redhat.com/changeLanguage?language=ko&amp;redirectTo=https%3A//access.redhat.com/" id="accessibility-ko">한국어</a></li>
+                            <li><a href="https://access.redhat.com/changeLanguage?language=fr&amp;redirectTo=https%3A//access.redhat.com/" id="accessibility-fr">français</a></li>
+                            <li><a href="https://access.redhat.com/changeLanguage?language=ja&amp;redirectTo=https%3A//access.redhat.com/" id="accessibility-ja">日本語</a></li>
+                            <li><a href="https://access.redhat.com/changeLanguage?language=pt&amp;redirectTo=https%3A//access.redhat.com/" id="accessibility-pt">português</a></li>
+                            <li><a href="https://access.redhat.com/changeLanguage?language=zh_CN&amp;redirectTo=https%3A//access.redhat.com/" id="accessibility-zh_CN">中文 (中国)</a></li>
+                            <li><a href="https://access.redhat.com/changeLanguage?language=ru&amp;redirectTo=https%3A//access.redhat.com/" id="accessibility-ru">русский</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- end -->
+            </nav>
+        </div>
+    </template>
+
+    <script>
+        Polymer({
+          is: 'cp-menu-accessibility'
+        });
+    </script>
+
+</dom-module>

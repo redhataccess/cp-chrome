@@ -1,0 +1,18 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="cp-menu-accessibility">
+<link rel="import" href="cp-menu-desktop">
+<link rel="import" href="cp-menu-mobile">
+
+<dom-module id="cp-menu">
+    <template>
+        <cp-menu-accessibility></cp-menu-accessibility>
+        <cp-menu-desktop></cp-menu-desktop>
+        <cp-menu-mobile></cp-menu-mobile>
+    </template>
+
+    <script>
+        Polymer({
+          is: 'cp-menu'
+        });
+    </script>
+</dom-module>

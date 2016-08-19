@@ -86,6 +86,6 @@ Polymer({
         var cp_head = document.createElement('cp-head');
         cp_head.onReady(this.revealGate.bind(this));
         cp_head.copyChildrenToHead();
-    },
+    }
 
 });
