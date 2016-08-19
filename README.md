@@ -18,6 +18,13 @@ Onward:
     git clone git@github.com:redhataccess/cp-chrome.git
     cd cp-chrome
     bower install
+
+Then make a symlink to your copy of avalon-docs:
+
+    ln -s $YOUR_AVALON_PATH src/assets
+
+And launch the server:
+
     http-server -g
 
 You should now be able to visit the localhost URL that's printed in your
