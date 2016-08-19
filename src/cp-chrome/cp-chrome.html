@@ -1,0 +1,27 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../cp-head/cp-head.html">
+<link rel="import" href="../cp-sandwich/cp-sandwich.html">
+
+<dom-module id="cp-chrome">
+    <template>
+        <style>
+            :host {
+                display: block;
+                opacity: 0;
+                transition: opacity 0.4s ease-out;
+            }
+            :host.assets-loaded {
+                opacity: 1;
+            }
+        </style>
+
+        <cp-sandwich env="[[envMap]]" locale="[[locale]]">
+            <template id="cp-chrome-content">
+                <content></content>
+            </template>
+        </cp-sandwich>
+
+    </template>
+
+    <script src="cp-chrome.js"></script>
+</dom-module>

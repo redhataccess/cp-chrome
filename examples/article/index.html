@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Article Example</title>
+        <!-- <script src="../../src/bower_components/webcomponentsjs/webcomponents-lite.js"></script> -->
+        <link rel="import" href="../../src/cp-chrome/cp-chrome.html">
+    </head>
+    <body>
+        <cp-chrome>
+            <article class="kcs_solution cirrus-content" id="main-content">
+
+                <div class="band band-first">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-sm-1 hidden-xs">
+                                <ul id="action-nav" class="action-nav affix-top">
+
+                                    <!-- Action-nav: Comments-->
+                                    <li>
+                                        <a href="&#10;             #comments          " title="" data-toggle="tooltip" data-placement="right" data-original-title="
+                                            Be the first to add a comment.     ">
+                                            <span class="web-icon-contact action-nav-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Comments</span>
+                                            <span class="action-nav-text">
+                                            </span>
+                                        </a>
+                                    </li>
+
+
+                                    <li>
+                                        <a href="#" rh-action-sheet-toggler="helpfulActionSheet" title="" data-toggle="tooltip" data-placement="right" data-original-title="
+                                            76                         users found this helpful.
+                                            ">
+                                            <span class="nimbus-icon-helpful action-nav-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Helpful</span>
+                                            <span class="action-nav-text">
+                                                76                  </span>
+                                        </a>
+                                    </li>
+
+
+
+                                    <!-- Action-nav: follow-->
+                                    <li>
+                                        <a href="#" rh-action-sheet-toggler="followActionSheet" title="" data-toggle="tooltip" data-placement="right" data-original-title="
+
+                                            Follow this content         ">
+                                            <span class="nimbus-icon-activity action-nav-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Follow</span>
+                                        </a>
+                                    </li>
+
+
+
+                                </ul>
+                            </div>
+
+                            <div class="col-sm-11 solution-content content-wrapper">
+                                <header class="header">
+                                    <h1 class="title">
+                                        How do I run the gcc preprocessor            </h1>
+                                    <div class="header-meta">
+                                        <span class="status verified" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="This solution has been verified to work by Red Hat Customers and Support Engineers for the specified product version(s)." data-original-title="" title="">
+                                            <span aria-hidden="true" class="icon-solution"></span> Solution Verified              </span> 
+                                        - Updated <time class="moment_date" datetime="2013-02-23T21:22:45-05:00" title="February 23 2013 at 9:22 PM">February 23 2013 at 9:22 PM</time>              - 
+
+                                        <div class="dropdown inline">
+                                            <a id="dLabel" data-target="#" href="" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                                English    <span class="caret"></span>
+                                            </a>
+
+                                            <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                                <li><a href="#">No translations currently exist.</a></li>  </ul>
+                                    </div>            </div>
+                                </header>
+                                <!--Display Content -->
+
+
+                                <section class="field_kcs_environment_txt">
+                                    <h2>Environment</h2>
+                                    <ul>
+                                        <li>RHEL</li>
+                                    </ul>
+                                </section>
+
+
+                                <section class="field_kcs_issue_txt">
+                                    <h2>Issue</h2>
+                                    <p>In certain situations it is needed to have source code preprocessed by <code>gcc</code> without undergoing the full compilation process. For example, this might be necessary when embedded SQL is included in C or C++ programs and the preprocesssed file will be passed on to another tool which will convert the SQL in native source code.</p>
+                                </section>
+
+
+                                <section class="field_kcs_resolution_txt">
+                                    <h2>Resolution</h2>
+                                    <p>Using the <code>-E</code> parameter with <code>gcc</code> or <code>g++</code> will produce only the preprocessed source code:</p>
+                                    <div class="code-raw"><div class="code-raw-toolbar"><a href="#" class="code-raw-btn">Raw</a></div><pre><code>$ gcc -E program.c -o program.preprocessed
+</code></pre></div><p>The <code>program.preprocessed</code> file will contain the file preprocessed by gcc (Macros will be expanded and all include files will be resolved). This preprocessed output will contain lines such as the following ones:</p>
+                                    <div class="code-raw"><div class="code-raw-toolbar"><a href="#" class="code-raw-btn">Raw</a></div><pre><code># 131 "/usr/include/bits/types.h" 3 4
+# 1 "/usr/include/bits/typesizes.h" 1 3 4
+# 132 "/usr/include/bits/types.h" 2 3 4
+</code></pre></div><p>These lines are linemarkers that show from which include files specific source code was taken. If those lines are not desired run the same command adding the <code>-P</code> parameter:</p>
+<div class="code-raw"><div class="code-raw-toolbar"><a href="#" class="code-raw-btn">Raw</a></div><pre><code>$ gcc -E -P program.c -o program.preprocessed
+</code></pre></div>  </section>
+<div class="clearfix">
+
+    <ul class="tag-list list-inline pull-left">
+        <li>
+            <small>
+                <strong>
+                    SBR        </strong>
+            </small>
+        </li>
+        <li class="badge"><a href="/sbr/tools" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Tools</a></li>
+    </ul>
+
+    <ul class="tag-list list-inline pull-left">
+        <li>
+            <small>
+                <strong>
+                    Product(s)        </strong>
+            </small>
+        </li>
+        <li class="badge"><a href="/taxonomy/products/red-hat-enterprise-linux" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Red Hat Enterprise Linux</a></li>
+    </ul>
+
+    <ul class="tag-list list-inline pull-left">
+        <li>
+            <small>
+                <strong>
+                    Component        </strong>
+            </small>
+        </li>
+        <li class="badge"><a href="/components/gcc" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">gcc</a></li>
+    </ul>
+
+    <ul class="tag-list list-inline pull-left">
+        <li>
+            <small>
+                <strong>
+                    Tags        </strong>
+            </small>
+        </li>
+        <li class="badge"><a href="/tags/g" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">g++</a></li>
+    </ul>
+</div>
+<!--Display fast track msg-->
+<p>
+    This solution is part of Red Hat’s fast-track publication program, providing a huge library of solutions that Red Hat engineers have created while supporting our customers. To give you the knowledge you need the instant it becomes available, these articles may be presented in a raw and unedited form.          </p>
+            </div>
+        </div>
+    </div>
+</div>          
+
+
+
+<div id="helpful" class="band band-narrow band-border-top ng-isolate-scope rh-actionsheet" helpful-band="" rh-component-id="helpfulActionSheet" rh-action-sheet="" rh-action-sheet-band="" previous-element=".band-first">
+    <div class="container text-center">
+        <button class="btn btn-round pull-right btn-actionsheet-close" rh-action-sheet-toggler="helpfulActionSheet">
+            <span class="icon-remove btn-icon btn-icon-only"></span>
+        </button>
+        <h2 class="subheading heading-inline">Was this helpful?</h2>
+        <div class="rh-actionsheet-btns">
+            <div class="rate-widget-4 rate-widget clear-block rate-average rate-widget-custom inline  rate-y73YJ5KbScB8tUJdAZty4zurNNBLxP5fAwwt8YsiYNg rate-node-100003-4-1--2 rate-processed" id="rate-node-100003-4-1--2">
+                <a href="/solutions/100003?rate=IQnYbFxAQfOG_bg6rPHAdAOKtWqrTm8ivpO8hYeKkQg" class="rate-btn rate-button btn btn-open-white btn-inline " ng-class="{'active': helpfulBandController.response === 'yes'}" ng-click="helpfulBandController.submit($event, 'yes')" rel="nofollow">Yes</a>  <a href="/solutions/100003?rate=IqGiKJbZpIuOq_CYqKN9y2N51vTNDP-VRedWy9rA5lc" class="rate-btn rate-button btn btn-open-white btn-inline " ng-class="{'active': helpfulBandController.response === 'no'}" ng-click="helpfulBandController.submit($event, 'no')" rel="nofollow">No</a>
+        </div>    </div>
+
+        <div ng-switch="helpfulBandController.response">
+            <!-- ngSwitchWhen: yes -->
+            <!-- ngSwitchWhen: no -->
+        </div>
+    </div>
+</div>
+<div id="follow" class="band band-narrow band-border-top ng-isolate-scope rh-actionsheet" follow-band="" ng-init="followBandController.following = false" rh-component-id="followActionSheet" rh-action-sheet="" rh-action-sheet-band="" previous-element=".band-first">
+    <div class="container text-center">
+        <form action="/solutions/100003" method="post" id="redhat-subscriptions-block-form" accept-charset="UTF-8" class="ng-pristine ng-valid">
+            <button class="btn btn-round pull-right btn-actionsheet-close" rh-action-sheet-toggler="followActionSheet">
+                <span class="icon-remove btn-icon btn-icon-only"></span>
+            </button>
+            <h2 class="subheading heading-inline">Get notified when this content is updated</h2>
+            <input class="btn btn-open-white form-submit ajax-processed" type="submit" id="edit-subscriptions-node-save-button--2" name="op" value="Follow">                <input type="hidden" name="subscriptions_block_field" value="follow">
+            <div class="push-top hide" id="subscription-email-msg">
+                You'll get an email whenever this content is updated or others comment. You can manage all of your notifications in <a href="/user/5010953">your profile</a>.        </div>
+            <input type="hidden" name="form_build_id" value="form-1b9V0xxIUNA4_FZuKVECN80H-pxbjYpkFzonKyVm9IM">
+            <input type="hidden" name="form_token" value="jP3zMYirzFaiWa9cY48u99zyncEjsot7p6QHGRh5zSQ">
+            <input type="hidden" name="form_id" value="redhat_subscriptions_block_form">
+        </form>
+    </div>
+</div>
+
+<div class="band band-border-top" id="case-links-target" style="display: block;"><div class="container"><h2>Case Links (Red Hat Internal)</h2><div class="row push-top"><div class="col-md-6"><p><a href="/support/cases/#/case/00617740">00617740</a> <span class="separator">-</span> rhn-support-mbaldess </p></div></div></div></div>
+<div class="band band-border-top">
+    <div class="container">
+        <div id="comments" class="comments-list">
+
+            <div class="comments-list-header"> 
+                <h2 class="headline headline-md heading-thin">
+                    Comments          </h2>
+                <!--Hide filter options -->
+                <div class="comments-sort-tools" style="display:none;">
+                    <div class="comments-sort">
+                        <div class="dropdown-select dropdown-select-horizontal">
+                            <select>
+                                <option value="lastModifiedDate asc">
+                                    Sort By Oldest
+                                </option>
+                                <option value="lastModifiedDate desc">
+                                    Sort By Newest
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <form id="ajax-comment-052503800-1471462685" class="comment-form add-comment-form comment-wrapper ng-pristine ng-valid" action="/comment/reply/100003" method="post" accept-charset="UTF-8"><div class="comment-inner"><div class="comment">
+                        <div class="comment-submitted">
+                            <div class="user-picture">
+                                <span class="thumbnail"><a href="/user/5010953" title="View user profile."><img typeof="foaf:Image" src="/sites/all/themes/kcs/images/default-user.png" alt="Michael Clayton's picture" title="Michael Clayton's picture"></a></span>
+                                <span class="badge badge-23 red-hat">Red Hat</span>
+                            </div>
+                        </div>
+
+                        <div class="comment-content"><div id="comment-now" class="add-comment-field"> <div class="form-textarea-wrapper resizable textarea-processed resizable-textarea"><textarea class="text-full form-textarea required" id="edit-comment-body-und-0-value" name="comment_body[und][0][value]" cols="60" rows="5"></textarea><div class="grippie"></div></div>
+                        </div></div>
+                        <div class="comments-add-comment-actions">
+                            <a href="#formatHelp" class="format-link" data-toggle="modal">Formatting Help</a>
+                            <input type="hidden" name="form_id" value="comment_node_kcs_solution_form">
+                            <input type="hidden" name="form_build_id" value="form-gwLVczzEktMpMu6a1d4rYmuWqIBlc4e13l7PP2nmqTo">
+                            <input type="hidden" name="form_token" value="AcSg2q7qBQYLEPtUOj-_zjpKPRSo1_OJhyQHC1wjQS8">
+                            <div class="form-item form-type-checkbox form-item-subscriptions-notify">
+                                <input type="checkbox" id="edit-subscriptions-notify--2" name="subscriptions_notify" value="1" checked="checked" class="form-checkbox">  <label class="option" for="edit-subscriptions-notify--2">Send notifications to content followers </label>
+
+                            </div>
+                            <div class="form-item form-type-checkbox form-item-field-kcs-private-comment-und">
+                                <input type="checkbox" id="edit-field-kcs-private-comment-und" name="field_kcs_private_comment[und]" value="1" class="form-checkbox">  <label class="option" for="edit-field-kcs-private-comment-und">Mark comment as private </label>
+
+                            </div>
+                            <div class="add-comment-buttons">
+                                <input class="btn form-submit ajax-processed" type="submit" id="edit-submit" name="op" value="Submit comment">    </div>
+                        </div>
+                    </div>
+
+                    <script src="remote-script.js"></script>
+                    <script>
+                        console.log('fake inline script from drupal');
+                    </script>
+
+
+            </div></form>  
+
+
+
+        </div>     
+    </div>
+</div>
+<meta itemscope="" itemref="md1 md2 md3 md4 md6 md7 md9 md11 md13"><meta itemscope="" id="md6" itemref="md5"><meta itemscope="" id="md9" itemref="md8"><meta itemscope="" id="md11" itemref="md10"><meta itemscope="" id="md13" itemref="md12">
+  </article>
+
+        </cp-chrome>
+    </body>
+</html>
