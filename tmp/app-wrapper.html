@@ -1,0 +1,19 @@
+<link rel="import" href="../src/bower_components/polymer/polymer.html">
+
+<dom-module id="app-wrapper">
+    <template>
+        <style> :host { display: block; } </style>
+
+        <header>COMMON HEADER</header>
+        <content></content>
+        <footer>COMMON FOOTER</footer>
+
+    </template>
+
+    <script>
+        Polymer({
+            is: 'app-wrapper',
+        });
+    </script>
+    <script defer="defer" src="foo.js"></script>
+</dom-module>

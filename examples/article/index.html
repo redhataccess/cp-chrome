@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>Article Example</title>
-        <script src="../../src/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+        <script src="../../src/cp-chrome/init.js"></script>
         <link rel="import" href="../../src/cp-chrome/cp-chrome.html">
     </head>
     <body>
@@ -245,7 +245,9 @@
 
                     <script src="remote-script.js"></script>
                     <script>
-                        console.log('fake inline script from drupal');
+                        chrometwo_require(['jquery'], function($) {
+                            console.log('fake inline script from drupal');
+                        });
                     </script>
 
 

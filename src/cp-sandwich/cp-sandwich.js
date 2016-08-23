@@ -12,7 +12,7 @@ Polymer({
 
     attached: function () {
         console.log('cp-sandwich attached');
-        this.deferScripts();
+        // this.deferScripts();
     },
 
     deferScripts: function () {

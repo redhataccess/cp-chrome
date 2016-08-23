@@ -2,13 +2,30 @@
 
 <html>
     <head>
-        <title>Labs Example</title>
-        <script src="../../src/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+        <title>Kickstart Generator</title>
+        <script src="../../src/cp-chrome/init.js"></script>
         <link rel="import" href="../../src/cp-chrome/cp-chrome.html">
+
+        <script defer type="text/javascript" src="816d06b0.loader.js"></script>
+        <link rel="stylesheet" href="677472ef.vendor.css">
+        <link rel="stylesheet" href="77a92715.app.css">
+
     </head>
     <body unresolved>
         <cp-chrome env="qa" locale="ja">
-            My Customer Portal Application
+
+            <div id="kickstartconfig" style="display: none;" class="container">
+                <h1 class="pkc-guided-header title" id="page-title"> Kickstart Generator</h1>
+                <div ui-view=""></div>
+            </div>
+
+            <script type="text/javascript">
+                window.breadcrumbs = [
+                    ['Labs', '/labs/'],
+                    ["Kickstart Generator","/labs/kickstartconfig/"]
+                ];
+            </script>
+
         </cp-chrome>
     </body>
 </html>

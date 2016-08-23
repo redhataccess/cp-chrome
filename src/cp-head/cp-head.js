@@ -31,6 +31,8 @@ Polymer({
     onReady: function (cb) {
         console.log('cp-head onReady');
         this.onReadyCallback = cb;
+        // run the callback right away in case all assets have already finished loading
+        cb(this.get('pendingAssetCount'));
     },
 
     copyChildrenToHead: function () {

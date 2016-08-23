@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Article Example</title>
+        <script src="../../src/cp-chrome/init.js"></script>
+        <link rel="import" href="../../src/cp-chrome/cp-chrome.html">
+    </head>
+    <body>
+        <cp-chrome>
+
+            <script src="remote-script.js"></script>
+            <script>
+                // chrometwo_require(['jquery'], function($) {
+                    console.log('script-handling: test embedded script');
+                // });
+            </script>
+
+        </cp-chrome>
+    </body>
+</html>
