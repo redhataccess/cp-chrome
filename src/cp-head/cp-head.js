@@ -38,8 +38,27 @@ Polymer({
     copyChildrenToHead: function () {
         console.log('cp-head injecting head elements');
         while (this.children.length) {
-            document.head.appendChild(this.children[0]);
+            if (this.children[0].nodeName === 'TITLE') {
+                this.copyTitleToHead(this.children[0]);
+            }
+            else {
+                this.copyNodeToHead(this.children[0]);
+            }
         }
+    },
+
+    copyTitleToHead: function (node) {
+        console.log('cp-head copying title to head');
+        var titleHasProperSuffix = new RegExp(node.textContent+'$').test(document.title);
+        if (!titleHasProperSuffix) {
+            document.title += ' - ' + node.textContent;
+        }
+        this.removeChild(node);
+    },
+
+    copyNodeToHead: function (node) {
+        console.log('cp-head copying ' + node + ' to head');
+        document.head.appendChild(node);
     },
 
 });

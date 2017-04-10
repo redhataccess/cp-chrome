@@ -2,9 +2,16 @@
 
 <html>
     <head>
-        <title>Article Example</title>
-        <script src="../../src/cp-chrome/init.js"></script>
+        <title>Article Example - Red Hat Customer Portal</title>
+        <script defer src="../../src/cp-chrome/init.js"></script>
         <link rel="import" href="../../src/cp-chrome/cp-chrome.html">
+        <style type="text/css" media="screen">
+            cp-chrome {
+            }
+            cp-chrome:not(.assets-loaded) {
+                opacity: 0;
+            }
+        </style>
     </head>
     <body>
         <cp-chrome>
@@ -243,12 +250,7 @@
                         </div>
                     </div>
 
-                    <script src="remote-script.js"></script>
-                    <script>
-                        chrometwo_require(['jquery'], function($) {
-                            console.log('fake inline script from drupal');
-                        });
-                    </script>
+                    <script defer src="remote-script.js"></script>
 
 
             </div></form>  

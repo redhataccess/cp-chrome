@@ -9,60 +9,21 @@ Polymer({
 
     ready: function () {
         console.log('cp-chrome ready');
-        window.portal = this.envs[this.env];
         this.registerAPI();
     },
 
     attached: function () {
         console.log('cp-chrome attached');
+        this.autoImport();
+        require('nimbus/nav').show_nav(); // TODO remove this after menu is componentized
     },
 
     properties: {
-        env: {
-            type: String,
-            value: 'prod',
-            observer: 'handleEnvChange',
-        },
-        envMap: {
-            type: Object,
-        },
         locale: {
             type: String,
             value: 'en',
             observer: 'handleLangChange',
         },
-    },
-
-    envs: {
-        'prod': {
-            host    : 'https://access.redhat.com',
-            idp_url : 'https://idp.redhat.com',
-            nrid    : '14615289',
-            nrlk    : '2a497fa56f',
-        },
-        'stage': {
-            host    : "",
-            idp_url : "",
-            nrid    : "",
-            nrlk    : "",
-        },
-        'qa': {
-            host    : "",
-            idp_url : "",
-            nrid    : "",
-            nrlk    : "",
-        },
-        'dev': {
-            host    : "",
-            idp_url : "",
-            nrid    : "",
-            nrlk    : "",
-        },
-    },
-
-    handleEnvChange: function (env) {
-        console.log('cp-chrome change env to ' + env);
-        this.set('envMap', this.envs[env]);
     },
 
     handleLangChange: function (lang) {
@@ -86,6 +47,15 @@ Polymer({
         var cp_head = document.createElement('cp-head');
         cp_head.onReady(this.revealGate.bind(this));
         cp_head.copyChildrenToHead();
+    },
+
+    autoImport: function () {
+        var els = document.querySelectorAll.call(document, portal.elements.names);
+        for (var i = 0; i < els.length; ++i) {
+            var name = els[i].nodeName.toLowerCase();
+            console.log('cp-chrome importing <' + name + '>');
+            this.importHref(portal.elements.paths[name]);
+        }
     },
 
 });
